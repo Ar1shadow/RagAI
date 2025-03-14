@@ -1,0 +1,175 @@
+{
+  "index": "default",
+  "document_id": "70155fb6788b46f39f07656ab3665523202503140956077847910",
+  "execution_id": "54b890b6173e4176aefd61b271aa47d3",
+  "steps": [
+    "extract",
+    "partition",
+    "gen_embeddings",
+    "save_records"
+  ],
+  "remaining_steps": [],
+  "completed_steps": [
+    "extract",
+    "partition",
+    "gen_embeddings",
+    "save_records"
+  ],
+  "tags": {},
+  "creation": "2025-03-14T08:56:07.949954+00:00",
+  "last_update": "2025-03-14T08:56:48.147369+00:00",
+  "files": [
+    {
+      "id": "96cf7dc2e0e2427fa9b0d5f4892208b6",
+      "name": "sample-KM-Readme.pdf",
+      "size": 211301,
+      "mime_type": "application/pdf",
+      "artifact_type": "Undefined",
+      "partition_number": 0,
+      "section_number": 0,
+      "tags": {},
+      "processed_by": [
+        "extract"
+      ],
+      "generated_files": {
+        "sample-KM-Readme.pdf.extract.txt": {
+          "id": "2c2515c5f37749508a22a61cc5b2716a",
+          "name": "sample-KM-Readme.pdf.extract.txt",
+          "size": 3251,
+          "mime_type": "text/plain",
+          "artifact_type": "ExtractedText",
+          "partition_number": 0,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "96cf7dc2e0e2427fa9b0d5f4892208b6",
+          "source_partition_id": "",
+          "content_sha256": "",
+          "processed_by": [
+            "extract",
+            "partition"
+          ]
+        },
+        "sample-KM-Readme.pdf.extract.json": {
+          "id": "03c6a14f6b1f4f6ab62710ef86d0f1a2",
+          "name": "sample-KM-Readme.pdf.extract.json",
+          "size": 3251,
+          "mime_type": "text/plain",
+          "artifact_type": "ExtractedContent",
+          "partition_number": 0,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "96cf7dc2e0e2427fa9b0d5f4892208b6",
+          "source_partition_id": "",
+          "content_sha256": "",
+          "processed_by": [
+            "extract"
+          ]
+        },
+        "sample-KM-Readme.pdf.partition.0.txt": {
+          "id": "9a271ee17f79420c8a31228d3b606b27",
+          "name": "sample-KM-Readme.pdf.partition.0.txt",
+          "size": 1864,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 0,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "96cf7dc2e0e2427fa9b0d5f4892208b6",
+          "source_partition_id": "",
+          "content_sha256": "b4a3ffb67b4dc11fcf52dde9b47fbeb3ffda869ff79a10f026baf65d1338ab9e",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "sample-KM-Readme.pdf.partition.1.txt": {
+          "id": "332da9e798a1474797336f5e7d2be2d1",
+          "name": "sample-KM-Readme.pdf.partition.1.txt",
+          "size": 1288,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 1,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "96cf7dc2e0e2427fa9b0d5f4892208b6",
+          "source_partition_id": "",
+          "content_sha256": "67cc5b37ade60c05ad4a6600c7f4166a8a8fd8cb1cc20428a6b8c2eb62403d2b",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "sample-KM-Readme.pdf.partition.2.txt": {
+          "id": "7fc76dfde3e5414caf855049b330065b",
+          "name": "sample-KM-Readme.pdf.partition.2.txt",
+          "size": 933,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 2,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "96cf7dc2e0e2427fa9b0d5f4892208b6",
+          "source_partition_id": "",
+          "content_sha256": "3fe721cb04a4d3d74a233a3090c794b90a94cd1df0e0149117aebc673cebbcd8",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "sample-KM-Readme.pdf.partition.0.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "5c7cb97981784caba0dd84d594eaab42",
+          "name": "sample-KM-Readme.pdf.partition.0.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45128,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 0,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "96cf7dc2e0e2427fa9b0d5f4892208b6",
+          "source_partition_id": "9a271ee17f79420c8a31228d3b606b27",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "sample-KM-Readme.pdf.partition.1.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "95688c5edd994ecf9a4519d6550c2cdc",
+          "name": "sample-KM-Readme.pdf.partition.1.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45286,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 1,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "96cf7dc2e0e2427fa9b0d5f4892208b6",
+          "source_partition_id": "332da9e798a1474797336f5e7d2be2d1",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "sample-KM-Readme.pdf.partition.2.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "302912b8b9474758a7600adf37b0353d",
+          "name": "sample-KM-Readme.pdf.partition.2.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45203,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 2,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "96cf7dc2e0e2427fa9b0d5f4892208b6",
+          "source_partition_id": "7fc76dfde3e5414caf855049b330065b",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        }
+      }
+    }
+  ],
+  "args": {},
+  "previous_executions_to_purge": []
+}

@@ -1,0 +1,1943 @@
+{
+  "index": "default",
+  "document_id": "305a5c7e56a343a7acca9e74c3d7495f202503140957471062720",
+  "execution_id": "e54109c7c6fb4fb4878a7ce3c2365620",
+  "steps": [
+    "extract",
+    "partition",
+    "gen_embeddings",
+    "save_records"
+  ],
+  "remaining_steps": [],
+  "completed_steps": [
+    "extract",
+    "partition",
+    "gen_embeddings",
+    "save_records"
+  ],
+  "tags": {},
+  "creation": "2025-03-14T08:57:47.107495+00:00",
+  "last_update": "2025-03-14T09:10:59.417338+00:00",
+  "files": [
+    {
+      "id": "15605bb6f82040bb85a85c9da43a100e",
+      "name": "HP-pages.pdf",
+      "size": 190519,
+      "mime_type": "application/pdf",
+      "artifact_type": "Undefined",
+      "partition_number": 0,
+      "section_number": 0,
+      "tags": {},
+      "processed_by": [
+        "extract"
+      ],
+      "generated_files": {
+        "HP-pages.pdf.extract.txt": {
+          "id": "3493bc5266d5478991c7548fae71f205",
+          "name": "HP-pages.pdf.extract.txt",
+          "size": 35382,
+          "mime_type": "text/plain",
+          "artifact_type": "ExtractedText",
+          "partition_number": 0,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "",
+          "processed_by": [
+            "extract",
+            "partition"
+          ]
+        },
+        "HP-pages.pdf.extract.json": {
+          "id": "5a2bb6cb78f44822992c4f156488115d",
+          "name": "HP-pages.pdf.extract.json",
+          "size": 35382,
+          "mime_type": "text/plain",
+          "artifact_type": "ExtractedContent",
+          "partition_number": 0,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "",
+          "processed_by": [
+            "extract"
+          ]
+        },
+        "HP-pages.pdf.partition.0.txt": {
+          "id": "c20a3248b35b4208a8b2dd58824c7978",
+          "name": "HP-pages.pdf.partition.0.txt",
+          "size": 882,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 0,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "a985440a6052765b76f3847835211ac8b249b09c994a8979377850736ef31f84",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.1.txt": {
+          "id": "f27e44a3527c45bc98e9c2340ea20681",
+          "name": "HP-pages.pdf.partition.1.txt",
+          "size": 865,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 1,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "db945d969e452da96984815ee4dd03e91b1d8ef4878adffeced5eae5aba98c01",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.2.txt": {
+          "id": "8ebf670ea007413c81feebcc2b117217",
+          "name": "HP-pages.pdf.partition.2.txt",
+          "size": 926,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 2,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "8a565adcae2011631c8e67ebf918f663b1f1ad2506756128ef29c815e4c71455",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.3.txt": {
+          "id": "4d53a7c437174ce682efcc5bb0c00924",
+          "name": "HP-pages.pdf.partition.3.txt",
+          "size": 830,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 3,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "30022846d14fd6665b11b716744264b32cf4d2ebc949363264f3dc9aced073fe",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.4.txt": {
+          "id": "ca4f885b0d3d461780f4f4105be11a64",
+          "name": "HP-pages.pdf.partition.4.txt",
+          "size": 843,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 4,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "a8a76d95150525b2043f67cedda7ff77f29d653c61331d923daf0994d9715e63",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.5.txt": {
+          "id": "37a01c57b9c1453a9ed7c05e589501e8",
+          "name": "HP-pages.pdf.partition.5.txt",
+          "size": 819,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 5,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "a23d085cb84be7a2ed4d79fcfef053f887b30a7254ba35d0b34ee479edddd218",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.6.txt": {
+          "id": "17ea500aa50c4683ae551b0ffca55e9f",
+          "name": "HP-pages.pdf.partition.6.txt",
+          "size": 859,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 6,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "01f4599b8374fb2da164ff7f13cfcb328b66131dab7fdcd6731da3c9995e90fb",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.7.txt": {
+          "id": "4888aae1eeae46ea8075bd97faf12993",
+          "name": "HP-pages.pdf.partition.7.txt",
+          "size": 916,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 7,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "cc068396601f1047bc4f71d700fddf584a7d5793b94a60a20149dcd74260b9ac",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.8.txt": {
+          "id": "99dadf3c89bf42f18f46a3ed99145012",
+          "name": "HP-pages.pdf.partition.8.txt",
+          "size": 853,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 8,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "697e485f71cd2e707ef0def88719b2461aadea9cab06e6cf89de09135a3ad1a5",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.9.txt": {
+          "id": "0328f1b437784626a1bad84e863b2134",
+          "name": "HP-pages.pdf.partition.9.txt",
+          "size": 868,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 9,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "b797a4461dde878d7723d6c6eb0ed56331f120e55c20bac6bcea071a8dd02afe",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.10.txt": {
+          "id": "45e197a29fda47ab939e499de6e65e89",
+          "name": "HP-pages.pdf.partition.10.txt",
+          "size": 861,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 10,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "35293a54de97960e18e9f8cf63ca68e8eadd34f1f91bbe382e77780d70575534",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.11.txt": {
+          "id": "91e7bf98c8c841e1843cf74ee2b3f664",
+          "name": "HP-pages.pdf.partition.11.txt",
+          "size": 900,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 11,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "cd6a7d7f85ad6c06d1d9585e0beed4232f07888fad2165f1595cfac8185fe319",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.12.txt": {
+          "id": "26e00e593ebf49079b80f1c4e15900a7",
+          "name": "HP-pages.pdf.partition.12.txt",
+          "size": 875,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 12,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "1bfc7383f90bdf18507b19c7c63281f19b16fcbb588fa555d1829f498020d2af",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.13.txt": {
+          "id": "43986adf807f4b948350117a838654b0",
+          "name": "HP-pages.pdf.partition.13.txt",
+          "size": 891,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 13,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "afba2f1f4755cfbb3d01c05375830d8e53d40a6014c69dfc3b4d3285bc223ad6",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.14.txt": {
+          "id": "9e6a746e31854582b5b052b9f994106e",
+          "name": "HP-pages.pdf.partition.14.txt",
+          "size": 754,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 14,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "31d4d7c9593c748ec5eef06381487106d86d8fdc6ceb226e158dc97f4692f876",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.15.txt": {
+          "id": "cc64bb472188413ba79b8b6a9b3d8f88",
+          "name": "HP-pages.pdf.partition.15.txt",
+          "size": 875,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 15,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "ceb115cf7fa30bc868b0db10a4a7c4d8db37324ee588dfdb2bdaf4a65d0eabb9",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.16.txt": {
+          "id": "d28f437eae2140c9ad0866c11199d913",
+          "name": "HP-pages.pdf.partition.16.txt",
+          "size": 956,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 16,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "d6a0494ee57251248f4bfa1a427ec1d63dc9960d2c7d66b7e2f2c5f40682d7a8",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.17.txt": {
+          "id": "b8484c918ceb4515b2068cc615636826",
+          "name": "HP-pages.pdf.partition.17.txt",
+          "size": 841,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 17,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "fa54cd10bfce7e6188f09f5203eae4ab26450f1be2eebc6785d5671d46e4741e",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.18.txt": {
+          "id": "9e3358f21775467583d1cd298503c29b",
+          "name": "HP-pages.pdf.partition.18.txt",
+          "size": 913,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 18,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "bbfb42218a21b05752746324e82937fe3b6dfeb7cbc2565b571f66addc24af2c",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.19.txt": {
+          "id": "db0437059ed74df6bfb5f98778de8b55",
+          "name": "HP-pages.pdf.partition.19.txt",
+          "size": 877,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 19,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "43af26f73d60b10c384fba4499ba080443425acdad069aecb9c806da9779004e",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.20.txt": {
+          "id": "32fc4ee6633746f98415f2747918f60b",
+          "name": "HP-pages.pdf.partition.20.txt",
+          "size": 855,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 20,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "5462eff5b366eb53c2a90bcab2a6febe2997ef1ea157e6b4d94a04b513059ce3",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.21.txt": {
+          "id": "d7566a76ddf34232875f4f1ed6463410",
+          "name": "HP-pages.pdf.partition.21.txt",
+          "size": 930,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 21,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "50fba5fc318f52e436d8b0fb9e54487c2daf688aef6883e03dc741990f878695",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.22.txt": {
+          "id": "c359a456d5934b87bd2daf19a962a670",
+          "name": "HP-pages.pdf.partition.22.txt",
+          "size": 699,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 22,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "cc9a0d50efdcbc72e3ec76c92d21e0242718aee26589bac52fe840890f516ec4",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.23.txt": {
+          "id": "9a142a6b981d470984495c775a045da7",
+          "name": "HP-pages.pdf.partition.23.txt",
+          "size": 883,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 23,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "0ba2f3d2ac95e902f1ffeb21118aa14933d7f68b10c6b5aa02905f4af579d66b",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.24.txt": {
+          "id": "675eb021dfc94dc182069fefd6dcda16",
+          "name": "HP-pages.pdf.partition.24.txt",
+          "size": 880,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 24,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "d338d927b8c27343fb668b05eee4aff59c219b2bce4f393f87424ab10c7d8331",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.25.txt": {
+          "id": "bff6a7d448664f1ea6a180e5182a187e",
+          "name": "HP-pages.pdf.partition.25.txt",
+          "size": 851,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 25,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "6825a1efaf9f6ccd3afe74de126d91f396ff07ceec07f6425905f85ff164369c",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.26.txt": {
+          "id": "36a92df829a841ac8af0e2cd29cd602a",
+          "name": "HP-pages.pdf.partition.26.txt",
+          "size": 913,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 26,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "f416151815d87b80c3aeb4ddf0f762faa6aca514ce518e6e3ad5ac5910ae168f",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.27.txt": {
+          "id": "cdf0068441f54ef5bb663c01aed6bf39",
+          "name": "HP-pages.pdf.partition.27.txt",
+          "size": 900,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 27,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "2b46f6e9e4eb85cd12a6b118906f961dd288646b65ce34123df0eaac241d25f4",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.28.txt": {
+          "id": "6c1f9cbcaa3c4e19aff76e3e562852dd",
+          "name": "HP-pages.pdf.partition.28.txt",
+          "size": 832,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 28,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "bf2d00731b0ebbf9703e0547666b71b84c2953a4b88fbf3a55f5751adc26a62d",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.29.txt": {
+          "id": "486c28bc36504de99088a4b36fc18ef2",
+          "name": "HP-pages.pdf.partition.29.txt",
+          "size": 859,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 29,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "dea21b72325c2d45e0ee550787ad04e1cb387f27d5a3bb98c60fbc1296c987e2",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.30.txt": {
+          "id": "3a472623c4f54cb9a906c9fadaa464ba",
+          "name": "HP-pages.pdf.partition.30.txt",
+          "size": 829,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 30,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "8f2ab22adc43ac1dfa617833624db1bbf013a58e3a5d001cd00e96fdb4daab96",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.31.txt": {
+          "id": "96d7bf5d83894e7b966a6c65095a19c4",
+          "name": "HP-pages.pdf.partition.31.txt",
+          "size": 867,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 31,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "175923cfbd03374110c832fbe3fb508fcad42a813ac381079b1d709daedecc23",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.32.txt": {
+          "id": "7eae98165a594cbd9722ee79afd287e0",
+          "name": "HP-pages.pdf.partition.32.txt",
+          "size": 894,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 32,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "04b071d0669bcdecd2553fc95280380b623593af3616864c7bec3812d692b03f",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.33.txt": {
+          "id": "13d1df5198974567a75f5bb3353c704f",
+          "name": "HP-pages.pdf.partition.33.txt",
+          "size": 821,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 33,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "51af1073921e93f543cc4d647d239c04c9af14bd116261dea459015360b83784",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.34.txt": {
+          "id": "d2aaa6e99a4d42ae9548f4add964ca88",
+          "name": "HP-pages.pdf.partition.34.txt",
+          "size": 907,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 34,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "af5dc9bf78cc76a6ba3c9eae425dc5e4e3084fc0dc2ce5885dcd3837f577c56d",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.35.txt": {
+          "id": "ce44c6fc4f384ec6adea81828edea902",
+          "name": "HP-pages.pdf.partition.35.txt",
+          "size": 899,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 35,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "19faab32f4b3c0bf1920fd01ff065d64dcb0f817b6089890798232840feb0a98",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.36.txt": {
+          "id": "dd1e9241ca7a4da6bda24597d052a248",
+          "name": "HP-pages.pdf.partition.36.txt",
+          "size": 819,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 36,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "ea08f9df8a3d29b772f35b9ceed055bde73f242a7d2fe42dcfa4ec17fa6b3037",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.37.txt": {
+          "id": "230f21e50936489e9d9a757f9421253e",
+          "name": "HP-pages.pdf.partition.37.txt",
+          "size": 917,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 37,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "968a2b004801bbe9d27c81aaf06d58aceb688948b8e7c197e01ab30689da360a",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.38.txt": {
+          "id": "64103ecf0e9943789327752f268781f6",
+          "name": "HP-pages.pdf.partition.38.txt",
+          "size": 916,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 38,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "84f310b31e63a9306e36aa271984a2050ec29ef967000f57f1fdb4aa84a3b636",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.39.txt": {
+          "id": "7e3906f5c7d24917a68e1cbe3164cbaf",
+          "name": "HP-pages.pdf.partition.39.txt",
+          "size": 912,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 39,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "39b2ae8af0bf28960080104f3e3a754a76a86676df2f4a96a201371e5717f842",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.40.txt": {
+          "id": "1f96949ab8c44052a1a027a840bf8697",
+          "name": "HP-pages.pdf.partition.40.txt",
+          "size": 904,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 40,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "5cda1083c28503e1521d16748725222a5deb62c93a4c5813ee8de2a3c285e96c",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.41.txt": {
+          "id": "8c60d56dfa0542c39cf63b7e5b92b51a",
+          "name": "HP-pages.pdf.partition.41.txt",
+          "size": 866,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 41,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "3240f8bfe604862f93f982095ae69ec4d1bc04a69a14269ddc26205d2cc98852",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.42.txt": {
+          "id": "c3803e5266e64c6a88f442be97637fd9",
+          "name": "HP-pages.pdf.partition.42.txt",
+          "size": 856,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 42,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "4864780c11f3c9c1ade336f1cc123d72c96194d31e0c6763edcfd3a1642934be",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.43.txt": {
+          "id": "a98f62405e3d47e896843fd7ef60f796",
+          "name": "HP-pages.pdf.partition.43.txt",
+          "size": 834,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 43,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "ba7e318656ab065079b7de2a8aab5688580234e6585ea378eaf610a3ced483ef",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.44.txt": {
+          "id": "8600e871380d4e1a8002f676e4dd65b4",
+          "name": "HP-pages.pdf.partition.44.txt",
+          "size": 934,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 44,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "d891a5356e050ea4f50bf53fb3ae3269eab9b55cf5ab5da1a0112c5535a3b67c",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.45.txt": {
+          "id": "b57c64f8160f4547921ac2c3700809a5",
+          "name": "HP-pages.pdf.partition.45.txt",
+          "size": 923,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 45,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "a86358fa0efb1330fb5b81ac914c034a2469ab5136a3544dae4491700417d6bc",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.46.txt": {
+          "id": "952f062a2bbb49b5ace80456a08cd95e",
+          "name": "HP-pages.pdf.partition.46.txt",
+          "size": 877,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 46,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "4925893faa4ad8b91057acdeeeb82e97c08d8083fece49f895fdaece022c09bb",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.47.txt": {
+          "id": "96d6fcb2db1048af96387250143ad9b7",
+          "name": "HP-pages.pdf.partition.47.txt",
+          "size": 895,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 47,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "a18fe01f83a6910449e1cf620f7d1356d2a46c82e7bbf337972ca737dbdf1810",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.48.txt": {
+          "id": "39a19ce76a404a5ca17fec28e7f23d2b",
+          "name": "HP-pages.pdf.partition.48.txt",
+          "size": 920,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 48,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "72466936056b8051869362c2b931bc373100137659976146722be0ad552bcd66",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.49.txt": {
+          "id": "7b69723d662341099c2aeb5ad7a3cf29",
+          "name": "HP-pages.pdf.partition.49.txt",
+          "size": 919,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 49,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "25ce538ddc65a4d535c86ac800267ca17df253cdd82a2aa9a7d5babe747458f5",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.50.txt": {
+          "id": "dc2418e82c6d439bb843111421e7bf18",
+          "name": "HP-pages.pdf.partition.50.txt",
+          "size": 830,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 50,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "2a5f89ff65a867ab9dc4526a269a28ff33d8a8b6fe3f42aa52eaee75e147cfee",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.51.txt": {
+          "id": "8abd67fef4284d35ac2c83971a4a192b",
+          "name": "HP-pages.pdf.partition.51.txt",
+          "size": 953,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 51,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "ad1f7114d511e1e818152458c81f6400555159cf2f6432738e11062cb2e049e8",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.52.txt": {
+          "id": "7d9abf0486f9463988f7990ef283934b",
+          "name": "HP-pages.pdf.partition.52.txt",
+          "size": 936,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 52,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "d2c958e22722e1ef88b92f9a1b1c24700f74803fa413802ab391fe46d969c29e",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.53.txt": {
+          "id": "2b0908f2b47e4473a87074224fedfbb2",
+          "name": "HP-pages.pdf.partition.53.txt",
+          "size": 701,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 53,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "992adf195f3636a601dcd81965fefa15a1e3d3ac0dc76ed8e1af653af9472547",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.54.txt": {
+          "id": "e762b44728fb4665a10c2ad6d50a6307",
+          "name": "HP-pages.pdf.partition.54.txt",
+          "size": 839,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 54,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "",
+          "content_sha256": "78d25a23276ba7fbaa00cbb795550b4340cef8553079a8a8689d1842fe2961de",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "HP-pages.pdf.partition.0.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "d0247b1ddc1746c5981531fbcf2fed1c",
+          "name": "HP-pages.pdf.partition.0.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45157,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 0,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "c20a3248b35b4208a8b2dd58824c7978",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.1.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "2e8760c9616d417a989c02c4f37ac56b",
+          "name": "HP-pages.pdf.partition.1.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45076,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 1,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "f27e44a3527c45bc98e9c2340ea20681",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.2.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "1a24ee33094e422ea8ede1f8de3f374e",
+          "name": "HP-pages.pdf.partition.2.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45209,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 2,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "8ebf670ea007413c81feebcc2b117217",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.3.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "4fe5914263fc4ea98973d3e0bd565221",
+          "name": "HP-pages.pdf.partition.3.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45173,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 3,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "4d53a7c437174ce682efcc5bb0c00924",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.4.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "f11adfa02ca84f489de66dd87eb4487b",
+          "name": "HP-pages.pdf.partition.4.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45246,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 4,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "ca4f885b0d3d461780f4f4105be11a64",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.5.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "832fec6ae8514634af049df506925330",
+          "name": "HP-pages.pdf.partition.5.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45301,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 5,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "37a01c57b9c1453a9ed7c05e589501e8",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.6.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "daba730ba62b4feabe2915f03878f797",
+          "name": "HP-pages.pdf.partition.6.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45222,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 6,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "17ea500aa50c4683ae551b0ffca55e9f",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.7.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "d320ae3e8e324fb08166f2e2eee7c032",
+          "name": "HP-pages.pdf.partition.7.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45162,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 7,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "4888aae1eeae46ea8075bd97faf12993",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.8.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "2d1823965885429c870bea53ac572e83",
+          "name": "HP-pages.pdf.partition.8.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45299,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 8,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "99dadf3c89bf42f18f46a3ed99145012",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.9.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "6b2713f4388d4e8ea6d4810eadc79932",
+          "name": "HP-pages.pdf.partition.9.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45274,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 9,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "0328f1b437784626a1bad84e863b2134",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.10.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "d29fe25d31a7434598554fb109d91ac2",
+          "name": "HP-pages.pdf.partition.10.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45135,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 10,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "45e197a29fda47ab939e499de6e65e89",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.11.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "d69095a189154ba4afbccdf5496a8f6a",
+          "name": "HP-pages.pdf.partition.11.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45306,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 11,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "91e7bf98c8c841e1843cf74ee2b3f664",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.12.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "4d9cf2b63ac7480988e9a8057ff14b1b",
+          "name": "HP-pages.pdf.partition.12.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45193,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 12,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "26e00e593ebf49079b80f1c4e15900a7",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.13.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "be60da7ddfc446a58e9a390c504317b8",
+          "name": "HP-pages.pdf.partition.13.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45186,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 13,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "43986adf807f4b948350117a838654b0",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.14.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "869d6fb78d664ba88e7942255c110d6a",
+          "name": "HP-pages.pdf.partition.14.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45195,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 14,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "9e6a746e31854582b5b052b9f994106e",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.15.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "0efc7e9dd4e3468985f15a61cfec1bba",
+          "name": "HP-pages.pdf.partition.15.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45144,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 15,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "cc64bb472188413ba79b8b6a9b3d8f88",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.16.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "325ca27155474d1692cdeadf307120bd",
+          "name": "HP-pages.pdf.partition.16.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45177,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 16,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "d28f437eae2140c9ad0866c11199d913",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.17.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "7e13273827ae4b74be10bfaa43ffc528",
+          "name": "HP-pages.pdf.partition.17.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45127,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 17,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "b8484c918ceb4515b2068cc615636826",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.18.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "d03f65cb3fa44d7e9674f154fba46563",
+          "name": "HP-pages.pdf.partition.18.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45167,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 18,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "9e3358f21775467583d1cd298503c29b",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.19.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "00d96b555bf54d418c58908eb6bc3058",
+          "name": "HP-pages.pdf.partition.19.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45154,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 19,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "db0437059ed74df6bfb5f98778de8b55",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.20.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "9e484115d56347228a617936732b2cdc",
+          "name": "HP-pages.pdf.partition.20.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45186,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 20,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "32fc4ee6633746f98415f2747918f60b",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.21.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "bf73eb760d5148f584be9305ca81142f",
+          "name": "HP-pages.pdf.partition.21.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45201,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 21,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "d7566a76ddf34232875f4f1ed6463410",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.22.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "b545cd8086d74e28aaa72187fd8be0b1",
+          "name": "HP-pages.pdf.partition.22.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45261,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 22,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "c359a456d5934b87bd2daf19a962a670",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.23.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "ce91ef091f2a4ab0a8b63a9f3635b6e5",
+          "name": "HP-pages.pdf.partition.23.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45223,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 23,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "9a142a6b981d470984495c775a045da7",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.24.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "e72a71fcba7d4895943886f627bdf33b",
+          "name": "HP-pages.pdf.partition.24.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45180,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 24,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "675eb021dfc94dc182069fefd6dcda16",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.25.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "90eedc844983404bb2d421d9588ceae6",
+          "name": "HP-pages.pdf.partition.25.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45154,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 25,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "bff6a7d448664f1ea6a180e5182a187e",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.26.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "a07986ee6d604cbcb6450d958ca9798b",
+          "name": "HP-pages.pdf.partition.26.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45196,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 26,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "36a92df829a841ac8af0e2cd29cd602a",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.27.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "5e35cbc30887485793b1803cb3fdca23",
+          "name": "HP-pages.pdf.partition.27.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45055,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 27,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "cdf0068441f54ef5bb663c01aed6bf39",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.28.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "122d847e6ebd42e88d0ed0b7842aa9ad",
+          "name": "HP-pages.pdf.partition.28.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45198,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 28,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "6c1f9cbcaa3c4e19aff76e3e562852dd",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.29.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "eb261d4d7c794ab781ccb1887bff5477",
+          "name": "HP-pages.pdf.partition.29.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45246,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 29,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "486c28bc36504de99088a4b36fc18ef2",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.30.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "5abae2d0e7e74519a1dfe8e4ca9ccd9d",
+          "name": "HP-pages.pdf.partition.30.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45184,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 30,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "3a472623c4f54cb9a906c9fadaa464ba",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.31.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "a8f37424288044efacd6dff0bb8930c1",
+          "name": "HP-pages.pdf.partition.31.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45205,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 31,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "96d7bf5d83894e7b966a6c65095a19c4",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.32.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "c8a608f45c9a40cbac5e6dccfa42e086",
+          "name": "HP-pages.pdf.partition.32.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45201,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 32,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "7eae98165a594cbd9722ee79afd287e0",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.33.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "91524fb02bb34a49872bda6b5e3fdf5b",
+          "name": "HP-pages.pdf.partition.33.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45160,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 33,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "13d1df5198974567a75f5bb3353c704f",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.34.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "acc776838f8f4d2888c10bc485ab401a",
+          "name": "HP-pages.pdf.partition.34.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45306,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 34,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "d2aaa6e99a4d42ae9548f4add964ca88",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.35.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "a04698f2c99148fba93bf8e3f163e29f",
+          "name": "HP-pages.pdf.partition.35.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45182,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 35,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "ce44c6fc4f384ec6adea81828edea902",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.36.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "e432bebedb4743b384ca915061603ae9",
+          "name": "HP-pages.pdf.partition.36.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45171,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 36,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "dd1e9241ca7a4da6bda24597d052a248",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.37.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "a0149b19a0c146bfa5bca10a73a0b9e7",
+          "name": "HP-pages.pdf.partition.37.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45141,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 37,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "230f21e50936489e9d9a757f9421253e",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.38.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "0198c301f3ce4804b9a8d23b7edc6aec",
+          "name": "HP-pages.pdf.partition.38.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45228,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 38,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "64103ecf0e9943789327752f268781f6",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.39.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "84006db3f7b045d1ae9193bdc3c477f8",
+          "name": "HP-pages.pdf.partition.39.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45088,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 39,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "7e3906f5c7d24917a68e1cbe3164cbaf",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.40.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "9a7dbdb5d7ef4bd0b5905f81875ed36a",
+          "name": "HP-pages.pdf.partition.40.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45102,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 40,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "1f96949ab8c44052a1a027a840bf8697",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.41.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "15d72f3367574b748d2fd47a720d2571",
+          "name": "HP-pages.pdf.partition.41.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45213,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 41,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "8c60d56dfa0542c39cf63b7e5b92b51a",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.42.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "7d03f6b4d14e407bb1a6ca4603089d41",
+          "name": "HP-pages.pdf.partition.42.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45264,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 42,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "c3803e5266e64c6a88f442be97637fd9",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.43.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "fb4fdc51e46b41a5ab4902ede5b5a2fa",
+          "name": "HP-pages.pdf.partition.43.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45209,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 43,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "a98f62405e3d47e896843fd7ef60f796",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.44.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "0e3e1d65e0ab4d859c0bb7134292c00f",
+          "name": "HP-pages.pdf.partition.44.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45265,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 44,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "8600e871380d4e1a8002f676e4dd65b4",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.45.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "be47016db0c64bdd88c4159ae17b45e1",
+          "name": "HP-pages.pdf.partition.45.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45181,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 45,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "b57c64f8160f4547921ac2c3700809a5",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.46.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "673e4ed11e7948dea0d1b58edb62eb0a",
+          "name": "HP-pages.pdf.partition.46.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45179,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 46,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "952f062a2bbb49b5ace80456a08cd95e",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.47.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "4d48bb4127e84f57ab46fcfbb0b49b65",
+          "name": "HP-pages.pdf.partition.47.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45265,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 47,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "96d6fcb2db1048af96387250143ad9b7",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.48.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "4f7dcb5491f74c71ba3b539b37df37b8",
+          "name": "HP-pages.pdf.partition.48.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45191,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 48,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "39a19ce76a404a5ca17fec28e7f23d2b",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.49.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "f523b97307c541e0a60e1a13f45d698b",
+          "name": "HP-pages.pdf.partition.49.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45171,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 49,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "7b69723d662341099c2aeb5ad7a3cf29",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.50.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "b4cb25ade4f145b19450c2d188845ad1",
+          "name": "HP-pages.pdf.partition.50.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45243,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 50,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "dc2418e82c6d439bb843111421e7bf18",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.51.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "88e6531984bd4cdeb129492d7b84252f",
+          "name": "HP-pages.pdf.partition.51.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45332,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 51,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "8abd67fef4284d35ac2c83971a4a192b",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.52.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "9fc9fc1db4f04b30beed39479be5cca6",
+          "name": "HP-pages.pdf.partition.52.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45330,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 52,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "7d9abf0486f9463988f7990ef283934b",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.53.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "2d03e38632d64c89b9e8f80dbb040209",
+          "name": "HP-pages.pdf.partition.53.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45215,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 53,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "2b0908f2b47e4473a87074224fedfbb2",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "HP-pages.pdf.partition.54.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "e45a1f355dc041d894255075903dbacc",
+          "name": "HP-pages.pdf.partition.54.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45265,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 54,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "15605bb6f82040bb85a85c9da43a100e",
+          "source_partition_id": "e762b44728fb4665a10c2ad6d50a6307",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        }
+      }
+    }
+  ],
+  "args": {},
+  "previous_executions_to_purge": []
+}

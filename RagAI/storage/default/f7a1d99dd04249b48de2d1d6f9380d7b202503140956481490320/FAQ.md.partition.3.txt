@@ -1,0 +1,19 @@
+ it will appear, it's an undefined behaviour, which depends on the implementation inside the `LLamaExecutor`. Anyway, since it may leads to unexpected behaviors, it's recommended to trim your prompt or carefully keep consistent with your anti-prompt.
+ 
+## How to run LLM with non-English languages
+
+English is the most popular language in the world, and in the region of LLM. If you want to accept inputs and generate outputs of other languages, please follow the two tips below.
+
+1. Ensure the model you selected is well-trained with data of your language. For example, [LLaMA](https://github.com/meta-llama/llama) (original) used few Chinese text during the pretrain, while [Chinese-LLaMA-Alpaca](https://github.com/ymcui/Chinese-LLaMA-Alpaca) finetuned LLaMA with a large amount of Chinese text data. Therefore, the quality of the output of Chinese-LLaMA-Alpaca is much better than that of LLaMA.
+
+## Pay attention to the length of prompt
+
+Sometimes we want to input a long prompt to execute a task. However, the context size may limit the inference of LLama model. Please ensure the inequality below holds.
+
+$$ len(prompt) + len(response) < len(context) $$
+
+In this inequality, `len(response)` refers to the expected tokens for LLM to generate.
+
+## Choose models weight depending on you task
+
+The differences between modes may lead to much different behaviours under the same task. For example, if you're building a chat bot with non-English, a fine-tuned model specially for the language you want to use will have huge effect on the performance.

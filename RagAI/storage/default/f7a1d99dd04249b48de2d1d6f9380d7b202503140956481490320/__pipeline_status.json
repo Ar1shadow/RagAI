@@ -1,0 +1,209 @@
+{
+  "index": "default",
+  "document_id": "f7a1d99dd04249b48de2d1d6f9380d7b202503140956481490320",
+  "execution_id": "1229e79552874517aae660e179bd72f3",
+  "steps": [
+    "extract",
+    "partition",
+    "gen_embeddings",
+    "save_records"
+  ],
+  "remaining_steps": [],
+  "completed_steps": [
+    "extract",
+    "partition",
+    "gen_embeddings",
+    "save_records"
+  ],
+  "tags": {},
+  "creation": "2025-03-14T08:56:48.149637+00:00",
+  "last_update": "2025-03-14T08:57:47.10378+00:00",
+  "files": [
+    {
+      "id": "ca787492784041e78da92e39b7c1e32c",
+      "name": "FAQ.md",
+      "size": 5123,
+      "mime_type": "text/markdown",
+      "artifact_type": "Undefined",
+      "partition_number": 0,
+      "section_number": 0,
+      "tags": {},
+      "processed_by": [
+        "extract"
+      ],
+      "generated_files": {
+        "FAQ.md.extract.txt": {
+          "id": "081043dbcf144b12bcd84c3e324af886",
+          "name": "FAQ.md.extract.txt",
+          "size": 5122,
+          "mime_type": "text/markdown",
+          "artifact_type": "ExtractedText",
+          "partition_number": 0,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "ca787492784041e78da92e39b7c1e32c",
+          "source_partition_id": "",
+          "content_sha256": "",
+          "processed_by": [
+            "extract",
+            "partition"
+          ]
+        },
+        "FAQ.md.extract.json": {
+          "id": "ed87fbb714de48bc89e40fabdc4fb7e0",
+          "name": "FAQ.md.extract.json",
+          "size": 5122,
+          "mime_type": "text/markdown",
+          "artifact_type": "ExtractedContent",
+          "partition_number": 0,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "ca787492784041e78da92e39b7c1e32c",
+          "source_partition_id": "",
+          "content_sha256": "",
+          "processed_by": [
+            "extract"
+          ]
+        },
+        "FAQ.md.partition.0.txt": {
+          "id": "d9a4912f0117409798c6c8a84e78a4d4",
+          "name": "FAQ.md.partition.0.txt",
+          "size": 1641,
+          "mime_type": "text/markdown",
+          "artifact_type": "TextPartition",
+          "partition_number": 0,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "ca787492784041e78da92e39b7c1e32c",
+          "source_partition_id": "",
+          "content_sha256": "20343123ff3958c4a42597959fa4071208e2b500a61c1bcf73d54ef7827b293a",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "FAQ.md.partition.1.txt": {
+          "id": "1c4c9562a7354581b822dd67b440a365",
+          "name": "FAQ.md.partition.1.txt",
+          "size": 1777,
+          "mime_type": "text/markdown",
+          "artifact_type": "TextPartition",
+          "partition_number": 1,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "ca787492784041e78da92e39b7c1e32c",
+          "source_partition_id": "",
+          "content_sha256": "0924e89cc63a281eb59d37a2320209bddfec34699d5f0697a20baedbf373af01",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "FAQ.md.partition.2.txt": {
+          "id": "f46803ac45bf49649646d6b2b07495f1",
+          "name": "FAQ.md.partition.2.txt",
+          "size": 1506,
+          "mime_type": "text/markdown",
+          "artifact_type": "TextPartition",
+          "partition_number": 2,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "ca787492784041e78da92e39b7c1e32c",
+          "source_partition_id": "",
+          "content_sha256": "23cb24b8ac3ab17ff1d852783de460adbb1419937a6acee08128f0fda6476440",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "FAQ.md.partition.3.txt": {
+          "id": "dbccdb7a03ff481a9835a0d73fd468eb",
+          "name": "FAQ.md.partition.3.txt",
+          "size": 1550,
+          "mime_type": "text/markdown",
+          "artifact_type": "TextPartition",
+          "partition_number": 3,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "ca787492784041e78da92e39b7c1e32c",
+          "source_partition_id": "",
+          "content_sha256": "aef9215b65abe98c5d03aab660eb8713c192824ac9122547d59aa90ef70b75d0",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator/__"
+          ]
+        },
+        "FAQ.md.partition.0.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "b2d5897b9d744683baed13587bc93965",
+          "name": "FAQ.md.partition.0.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45255,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 0,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "ca787492784041e78da92e39b7c1e32c",
+          "source_partition_id": "d9a4912f0117409798c6c8a84e78a4d4",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "FAQ.md.partition.1.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "a3c4fe16e23541768052619bbdf762c0",
+          "name": "FAQ.md.partition.1.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45573,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 1,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "ca787492784041e78da92e39b7c1e32c",
+          "source_partition_id": "1c4c9562a7354581b822dd67b440a365",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "FAQ.md.partition.2.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "d9182368f4554b74afa4ac1352d0810c",
+          "name": "FAQ.md.partition.2.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45494,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 2,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "ca787492784041e78da92e39b7c1e32c",
+          "source_partition_id": "f46803ac45bf49649646d6b2b07495f1",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        },
+        "FAQ.md.partition.3.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "6185548b47e84dabbb5119c8569c1c89",
+          "name": "FAQ.md.partition.3.txt.LLamaSharp.KernelMemory.LLamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 45364,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 3,
+          "section_number": 0,
+          "tags": {},
+          "parent_id": "ca787492784041e78da92e39b7c1e32c",
+          "source_partition_id": "dbccdb7a03ff481a9835a0d73fd468eb",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        }
+      }
+    }
+  ],
+  "args": {},
+  "previous_executions_to_purge": []
+}
