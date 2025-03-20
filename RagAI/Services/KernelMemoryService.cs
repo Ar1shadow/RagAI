@@ -1,15 +1,17 @@
 using System.Diagnostics;
+using System.Formats.Asn1;
 using LLama;
 using LLama.Common;
 using LLamaSharp.KernelMemory;
 using RagAI.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.KernelMemory;
+using Microsoft.KernelMemory.Context;
 using Microsoft.KernelMemory.Configuration;
 using Microsoft.KernelMemory.DocumentStorage.DevTools;
 using Microsoft.KernelMemory.FileSystem.DevTools;
 using Microsoft.KernelMemory.MemoryStorage.DevTools;
-
+using System.Text.RegularExpressions;
 
 namespace RagAI.Services;
 
@@ -20,16 +22,19 @@ public class KernelMemoryService
 {
     private readonly ILogger<KernelMemoryService> _logger;
     private readonly IKernelMemory _kernelMemory;
-    // Using local storage for test
+    private readonly string _modelPath;
+    // Using local storage 
     static string StorageFolder => Path.GetFullPath(Path.Combine(Paths.BaseDirectory, "storage"));
-    static bool StorageExists => Directory.Exists(StorageFolder) && Directory.GetDirectories(StorageFolder).Length > 0;
+    //static bool StorageExists => Directory.Exists(StorageFolder) && Directory.GetDirectories(StorageFolder).Length > 0;
 
     public IKernelMemory KernelMemory => _kernelMemory; // Get methode
+    public string ModelPath => _modelPath; // Get methode
     
     public KernelMemoryService(ILogger<KernelMemoryService> logger)
     {
         _logger = logger;
-        _kernelMemory = Initialize(Paths.LlmPath, Paths.EmbeddingPath);
+        _modelPath = Paths.GetModelPath();
+        _kernelMemory = Initialize(_modelPath, Paths.EmbeddingPath);
     }
 
     /// <summary>
@@ -42,18 +47,22 @@ public class KernelMemoryService
     public IKernelMemory Initialize(string modelPath, string embeddingPath)
     {
         // configure kernel memory
-        InferenceParams infParams = new InferenceParams() { AntiPrompts = ["\n\n", "User;"]};
+        InferenceParams infParams = new InferenceParams() 
+        { 
+            AntiPrompts = [ "User;"],
+        };
         // configure LLM
-        LLamaSharpConfig lsConfig = new(Paths.LlmPath)
+        LLamaSharpConfig lsConfig = new(modelPath)
         {
             DefaultInferenceParams = infParams,
-            GpuLayerCount = 0, //Use Cpu Only
+            GpuLayerCount = 5, //for CUDA Metal OpenCL
+
         };
         // Search options
         SearchClientConfig searchClientConfig = new()
         {
             MaxMatchesCount = 5,
-            AnswerTokens = 200
+            AnswerTokens = 300
         };
         // Text partitioning options
         TextPartitioningOptions parseOptions = new()
@@ -72,7 +81,9 @@ public class KernelMemoryService
         // configure embedding model
         var embedWeights = LLamaWeights.LoadFromFile(new ModelParams(embeddingPath)
         {
-            Embeddings = true
+            Embeddings = true,
+            GpuLayerCount = 10, //for CUDA Metal OpenCL
+            BatchSize= 2048
         });
         
         SimpleFileStorageConfig storageConfig = new()
@@ -80,27 +91,23 @@ public class KernelMemoryService
             Directory = StorageFolder,
             StorageType = FileSystemTypes.Disk
         };
-
-        SimpleVectorDbConfig vectorDb = new()
-            {
-                Directory = StorageFolder,
-                StorageType = FileSystemTypes.Disk,
-            };
-        //var context = llmWeights.CreateContext(llmParams);
-        //var executor = new StatelessExecutor(llmWeights, llmParams);
+        
         
         _logger.LogInformation("Creating Kernel Memory, Memory Folder: {path}",StorageFolder);
         try
         {
             return new KernelMemoryBuilder()
                 .WithSimpleFileStorage(storageConfig)
-                .WithSimpleVectorDb(vectorDb)
                 .WithLLamaSharpTextGeneration(new LlamaSharpTextGenerator(lsConfig))
                 .WithLLamaSharpTextEmbeddingGeneration(new LLamaSharpTextEmbeddingGenerator(lsConfig, embedWeights))
                 .WithSearchClientConfig(searchClientConfig)
+                .WithQdrantMemoryDb(new QdrantConfig()
+                {
+                    Endpoint = "http://localhost:6333",
+                    APIKey = ""
+                })
                 .With(parseOptions)
                 .Build();
-            
         }
         catch (Exception e)
         {
@@ -117,43 +124,48 @@ public class KernelMemoryService
     /// <param name="DocumentsPath">The file path to the directory containing the documents to ingest.</param>
     /// <returns>A task representing the asynchronous operation of ingesting documents.</returns>
     /// <exception cref="Exception">Thrown when there is an error during the ingestion of documents.</exception>
-    public async Task IngestDocments(string DocumentsPath)
+    public async Task IngestDocuments(string DocumentsPath)
     {
-        if (StorageExists)
-        {
-            _logger.LogInformation("Kernel Memory Storage Folder located,\n" +
-                                   "Information about previously analyzed documents has been loaded");
-        
-        }else
-        {
-            Console.WriteLine($"""
-                            Kernel Memory Storage Folder not located!
-                            Documents will be loaded into Kernel Memory.
-                            Analysis will not be required the next time.
-                            """);
-            _logger.LogInformation("Start loading documents...");
-            string[] files = Directory.GetFiles(DocumentsPath);
-            for (int i = 0; i < files.Length; i++)
-            {
-                string file = files[i];
-                Stopwatch sw = Stopwatch.StartNew();
-                try
-                {
-                    _logger.LogInformation("{index} of {total} : Loading {file}", i+1, files.Length, file);
-                    await _kernelMemory.ImportDocumentAsync(file, steps: Constants.PipelineWithoutSummary);
-                    _logger.LogInformation("Loading documents done in {time}", sw.Elapsed);
-                }
-                catch (Exception e)
-                {
-                    _logger.LogError(e, "Error loading {file} : {index} of {total} :",file, i+1, files.Length);
-                    throw;
-                }
+        _logger.LogInformation("Start loading documents...");
+        // filter the hidden files
+        string[] files = Directory.GetFiles(DocumentsPath)
+            .Where(file => !Path.GetFileName(file).StartsWith("."))
+            .ToArray();
             
+        for (int i = 0; i < files.Length; i++)
+        {
+            string file = files[i]; 
+            var documentId = Normalize_fileNames(file); 
+            Stopwatch sw = Stopwatch.StartNew(); 
+            try 
+            {   // Check if the document is already in memory
+                if (await _kernelMemory.IsDocumentReadyAsync(documentId,index:"docs")) 
+                { 
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.WriteLine($"{i+1} of {files.Length} :  {file} exists, skipping loading");
+                    sw.Stop();
+                    continue;
+                }
+                    
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine($"{i+1} of {files.Length} : Loading {file}");
+                await _kernelMemory.ImportDocumentAsync(
+                    file,
+                    documentId:documentId,
+                    index: "docs",
+                    steps: Constants.PipelineWithoutSummary);
+                    
+                Console.WriteLine($"Loading documents {file} done in {sw.Elapsed}");
             }
-            _logger.LogInformation("Loading documents done");
+            catch (Exception e)
+            {
+                _logger.LogError(e, "Error loading {file} : {index} of {total} \n" +
+                                    "\"Skipping file due to unknown error: {file}",file, i+1, files.Length,file);
+            }
+            
         }
-
-        
+        _logger.LogInformation("Loading documents done");
+            
     }
 
     /// <summary>
@@ -162,7 +174,15 @@ public class KernelMemoryService
     /// <param name="query">The input query or prompt for which a response is to be generated.</param>
     /// <returns>A task representing the asynchronous operation.</returns>
     /// <exception cref="Exception">Thrown when an error occurs during the response generation process.</exception>
-    public async Task GenerateResponse(string query)
+    public async Task GenerateResponse(
+        string query,
+        string? index = "docs",
+        MemoryFilter? filter = null,
+        ICollection<MemoryFilter>? filters = null,
+        double minRelevance = 0,
+        SearchOptions? options = null,
+        IContext? context = null,
+        CancellationToken cancellationToken = default)
     {
         MemoryAnswer answer;
         Stopwatch sw = Stopwatch.StartNew();
@@ -170,7 +190,8 @@ public class KernelMemoryService
         Console.WriteLine("Start generating response...");
         try
         {
-             answer = await _kernelMemory.AskAsync(query);
+             answer = await _kernelMemory
+                 .AskAsync(query,index,filter,filters,minRelevance,options,context,cancellationToken);
             Console.WriteLine($"Generating response done in {sw.Elapsed}");
         }
         catch (Exception e)
@@ -183,11 +204,48 @@ public class KernelMemoryService
         foreach (var source in answer.RelevantSources)
         {
             Console.WriteLine($"Source:{source.SourceName}");
-            Console.WriteLine(source.Partitions);
+            //Console.WriteLine(source.Partitions);
         }
         Console.WriteLine();
     }
+
+    public async Task<string> GetMemory(string query, string? index="docs", double minRelevance = 0,bool asChunks = true)
+    {
+        if (asChunks)
+        {
+            try
+            {
+                SearchResult memories = await _kernelMemory.SearchAsync(query, index: index, limit:3);
+                return memories.Results
+                    .Select(m=>m.Partitions)
+                    .Aggregate("",(sum,chunk)=>sum + string.Join("\n",chunk.Select(p=>p.Text)) + "\n").Trim();//chunk[0]?
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e, "Error searching in memory");
+                throw;
+            }
+           
+        }
+        MemoryAnswer answer = await _kernelMemory.AskAsync(query, index: index, minRelevance: minRelevance);
+        return answer.Result.Trim();
+    }
     
+    public static string Normalize_fileNames(string fileName)
+    {
+        fileName = Path.GetFileName(fileName);
+        // remove special characters
+        var documentId = Path.GetFileNameWithoutExtension(fileName)
+                .Replace(" ", "_")
+                .Replace("-","_");
+        // Replaces all non-alphanumeric characters in the file name with underscores
+        // and removes consecutive underscores.
+        documentId = Regex.Replace(fileName, @"[^a-zA-Z0-9]", "_")
+            .Replace(@"_{2,}", "_");
+        // remove underscore from start to end
+        documentId = documentId.Trim('_');
+        return documentId;
+    }
     
     
 }

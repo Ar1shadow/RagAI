@@ -1,3 +1,5 @@
+using Spectre.Console;
+
 namespace RagAI.Configuration
 {
     ///<summary>
@@ -6,8 +8,31 @@ namespace RagAI.Configuration
     public static class Paths
     {
         // Model Name
-        public static readonly string LlmName = "Model/DeepSeek-R1-Distill-Llama-8B-Q4_K_M.gguf";
-        //public static readonly string LlmName = "Model/Mistral-4B.Q4_K_M.gguf";
+        private static readonly Dictionary<string,string> LlmModel =new ()
+        {
+            {"Mistral-7B","Model/Mistral-7B-Instruct-v0.3.Q4_K_M.gguf"},
+            {"DeepSeek-R1-8B","Model/DeepSeek-R1-Distill-Llama-8B-Q4_K_M.gguf"},
+            {"Mistral-4B","Model/Mistral-4B.Q4_K_M.gguf"}
+        };
+
+        public static string GetModelPath()
+        {
+            var choice = AnsiConsole.Prompt(
+                new SelectionPrompt<string>()
+                    .Title("Please choose[green] an model[/]: ")
+                    .AddChoices(LlmModel.Keys));
+
+            if (LlmModel.TryGetValue(choice, out var model))
+            {
+                AnsiConsole.Write(new Rule(choice));
+                return Path.Combine(BaseDirectory, model);
+            }else
+            {
+                throw new InvalidOperationException("Unable to determine the base directory.");
+            }
+        }
+        
+        public static string LlmName => GetModelPath();
         public static readonly string EmbeddingName = "Model/nomic-embed-text-v1.5.Q5_K_M.gguf";
 
         // // generally, working space is Debug,
@@ -17,7 +42,6 @@ namespace RagAI.Configuration
             ?? throw new InvalidOperationException("Unable to determine the base directory.");
         
         // Full path of Model
-        public static readonly string LlmPath = Path.Combine(BaseDirectory, LlmName);
         public static readonly string EmbeddingPath = Path.Combine(BaseDirectory, EmbeddingName);
         
         // path of Docs
